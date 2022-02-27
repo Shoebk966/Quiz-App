@@ -1,38 +1,351 @@
-.App {
+.Appparent {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  justify-content: center;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+.Appcard {
+  background: #252c4a;
+  height: 560px;
+  width: 360px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.clr1{
+  background: #942863  !important;
+}
+.clr2{
+  background: #0f925a  !important;
+}
+.clr3{
+  background: #0d9fb5  !important;
+}
+.clr4{
+  background: #0e9297  !important;
+}
+.clr5{
+  background: #ffcde9  !important;
+}
+.clr6{
+  background: #fcdd10  !important;
+}
+.clr7{
+  background: #b96def  !important;
+}
+.clr8{
+  background: #db5eaf  !important;
+}
+.bubbles{
+  position:absolute;
+  width:100%;
+  height: 100%;
+  z-index:0;
+  overflow:hidden;
+  top:0;
+  left:0;
+}
+.bubble{
+  position: absolute;
+  bottom:-100px;
+  width:40px;
+  height: 40px;
+  background:#f1f1f1;
+  border-radius:50%;
+  opacity:0.5;
+  animation: rise 10s infinite ease-in;
+}
+.bubble:nth-child(1){
+  width:40px;
+  height:40px;
+  left:10%;
+  animation-duration:8s;
+}
+.bubble:nth-child(2){
+  width:20px;
+  height:20px;
+  left:20%;
+  animation-duration:5s;
+  animation-delay:1s;
+}
+.bubble:nth-child(3){
+  width:50px;
+  height:50px;
+  left:35%;
+  animation-duration:7s;
+  animation-delay:2s;
+}
+.bubble:nth-child(4){
+  width:80px;
+  height:80px;
+  left:50%;
+  animation-duration:11s;
+  animation-delay:0s;
+}
+.bubble:nth-child(5){
+  width:35px;
+  height:35px;
+  left:55%;
+  animation-duration:6s;
+  animation-delay:1s;
+}
+.bubble:nth-child(6){
+  width:45px;
+  height:45px;
+  left:65%;
+  animation-duration:8s;
+  animation-delay:3s;
+}
+.bubble:nth-child(7){
+  width:90px;
+  height:90px;
+  left:70%;
+  animation-duration:12s;
+  animation-delay:2s;
+}
+.bubble:nth-child(8){
+  width:25px;
+  height:25px;
+  left:80%;
+  animation-duration:6s;
+  animation-delay:2s;
+}
+.bubble:nth-child(9){
+  width:15px;
+  height:15px;
+  left:70%;
+  animation-duration:5s;
+  animation-delay:1s;
+}
+.bubble:nth-child(10){
+  width:90px;
+  height:90px;
+  left:25%;
+  animation-duration:10s;
+  animation-delay:4s;
+}
+@keyframes rise{
+  0%{
+    bottom:-100px;
+    transform:translateX(0);
+  }
+  50%{
+    transform:translate(100px);
+  }
+  100%{
+    bottom:1080px;
+    transform:translateX(-200px);
+  }
+}
+.playbtn {
+  background: #117eeb;
+  padding: 10px 40px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 3;
+  position: relative;
+}
+.outerdiv {
+  position: relative;
+  z-index: 999;
+}
+.red{
+  border:2px solid red !important;
+
+}
+.green{
+  border:2px solid green !important;
+
+
+}
+.disable  {
+  pointer-events: none;
+}
+.outerdiv {
+  height: 558px;
+  width: 345px;
+}
+.timezone {
+  margin-top: 40px;
+    text-align: end;
+    border-radius: 10px;
+    display: flex;
+    justify-content: end;
+    width: 92%;
+}
+.timedesing {
+  width: 65px;
+  border: 1px solid #efefef;
+  display: block;
+  padding: 2px;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.maintime {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+.timeicon {
+  font-size: 19px;
+  margin-right: 7px;
+  margin-top: auto;
+  color: #efefef;
+}
+.qno {
+  text-align: left;
+  font-size: 22px;
+  font-weight: 600;
+  color: #efefefdb;
+  margin: 30px auto;
+  width: 85%;
+}
+.qslash {
+  font-weight: 100;
+  font-size: 16px;
+}
+.real-question {
+  font-size: 20px;
+  color: #fff;
+  text-align: left;
+  font-weight: 400;
+  margin: 30px auto;
+    width: 85%;
+}
+.my-btn {
+  background: none;
+  color: #fff;
+  width: 85%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #c8c8c8;
+  text-align: left;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+.my-btn {
+  background: transparent;
+  color: #fff;
+  width: 85%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #c8c8c8;
+  text-align: left;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  z-index: 99999 !important;
+  position: relative;
+  cursor: pointer;
+}
+.end-btn{
+  background: #117eeb;
+  padding: 10px 40px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 3;
+  position: relative;
+}
+.gmover {
+  width: 100%;
+  color: #fff;
+  font-size: 30px;
+}
+.resdiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.gameicon {
+  font-size: 60px;
+  color: goldenrod;
+}
+.wintag {
+  margin: 20px 0;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+.quiz-result {
+  color: #fff;
+  font-size: 20px;
+  margin: 20px 0px;
+}
+.wintag {
+  margin: 20px 0;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+.scoretitle {
+  color: #fff;
+  letter-spacing: 2px;
+  margin: 10px 0px;
+}
+.mainscore {
+  color: #117eeb;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.totlengh {
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.inp {
+  z-index: 9;
+  position: relative;
+}
+input.inp {
+  width: 100%;
+  border-radius: 5px;
+  height: 35px;
+  font-size: 20px;
+  text-align: center;
+}
+.indvi {
+  width: 300px;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+@media only screen and (max-width: 600px) {
+  
+.Appcard {
+  background: #252c4a;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+.qno {
+  margin: 30px 0px;
+}
+.real-question {
+  margin: 30px 0px;
+  font-size: 22px;
+}
+.my-btn {
+  width: 100%;
+  margin: 10px 0px;
+  height: 50px;
+  font-size: 18px;
+}
 }
