@@ -23,7 +23,7 @@ const Playgame = () => {
 
     <div>
 
- <div className='indvi'>   <input placeholder='enter your name' className='inp' type='text' value={name} onChange={(e)=> setName(e.target.value)} /></div>
+ <div className='indvi'>   <input placeholder='enter your nick name' className='inp' type='text' value={name} onChange={(e)=> setName(e.target.value)} /></div>
     
         <button className='playbtn' onClick={Getname}>Start Game</button>
     </div>
